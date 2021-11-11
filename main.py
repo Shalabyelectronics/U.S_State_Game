@@ -16,9 +16,7 @@ while state_count < len(state_data.state) - 1:
                                                                                  "correctly.").title()
     if user_answer in states_list:
         state_row = state_data[state_data.state == user_answer]
-        state_x = state_row.iloc[0, 1]
-        state_y = state_row.iloc[0, 2]
-        user.goto(state_x, state_y)
+        user.goto(int(state_row.x), int(state_row.y))
         user.write(user_answer, move=False, align="center", font=("Verdana", 10, "normal"))
         state_count += 1
 
