@@ -37,8 +37,9 @@ while len(guessed_states) < 50:
         with open("user_progress.csv", mode="w") as user_progress:
             for state in guessed_states:
                 user_progress.write(f"{state}\n")
+        break
     elif user_answer.lower() == "clear":
         with open("user_progress.csv", mode="w") as user_progress:
             pass
 
-screen.exitonclick()
+
