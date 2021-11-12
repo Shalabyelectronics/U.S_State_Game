@@ -9,10 +9,9 @@ user.hideturtle()
 user.penup()
 state_data = pd.read_csv("50_states.csv")
 states_list = state_data.state.to_list()
-guessed_states = []
+
 with open("user_progress.csv") as user_progress:
-    for line in user_progress.readlines():
-        guessed_states.append(line.strip())
+    guessed_states = [line.strip() for line in user_progress.readlines()]
 
 
 def locate_states_progress():
