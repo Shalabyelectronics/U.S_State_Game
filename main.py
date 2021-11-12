@@ -41,5 +41,6 @@ while len(guessed_states) < 50:
     elif user_answer.lower() == "clear":
         with open("user_progress.csv", mode="w") as user_progress:
             pass
+        break
 
 
